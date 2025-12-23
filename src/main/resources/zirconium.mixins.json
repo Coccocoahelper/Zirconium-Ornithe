@@ -6,7 +6,7 @@
   "mixins": [
     "chunksaving.MinecraftServerMixin",
     "chunksaving.ServerWorldMixin",
-    "languagereloading.LanguageOptionsScreenMixin"
+    "languagereloading.LanguageSelectionListWidgetMixin"
   ],
   "client": [
   ],
