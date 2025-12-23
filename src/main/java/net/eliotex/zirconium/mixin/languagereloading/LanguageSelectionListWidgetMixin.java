@@ -1,7 +1,7 @@
 package net.eliotex.zirconium.mixin.languagereloading;
 
 import net.minecraft.client.Minecraft;
-import net.minecaft.client.gui.screen.options.LanguageOptionsScreen.LanguageSelectionListWidget
+import net.minecaft.client.gui.screen.options.LanguageOptionsScreen.LanguageSelectionListWidget;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import org.spongepowered.asm.mixin.Mixin;
