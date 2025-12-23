@@ -58,7 +58,7 @@ public abstract class ServerWorldMixin {
         }
     }
 
-    @Redirect(method = {"createAndScheduleBlockTick(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;II)V",
+    @Redirect(method = {"scheduleTick(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;II)V",
             "scheduleTick(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;II)V"}, at = @At(value = "INVOKE",
             target = "Ljava/util/TreeSet;add(Ljava/lang/Object;)Z"))
     private boolean optimizedchunkloader$indexAdd(TreeSet<ScheduledTick> set, Object obj) {
@@ -70,7 +70,7 @@ public abstract class ServerWorldMixin {
         return added;
     }
 
-    @Redirect(method = "method_3644(Z)Z", at = @At(value = "INVOKE", target = "Ljava/util/TreeSet;remove(Ljava/lang/Object;)Z"))
+    @Redirect(method = "doScheduledTicks(Z)Z", at = @At(value = "INVOKE", target = "Ljava/util/TreeSet;remove(Ljava/lang/Object;)Z"))
     private boolean optimizedchunkloader$indexRemovePending(@NotNull TreeSet<ScheduledTick> set, Object obj) {
         ScheduledTick tick = (ScheduledTick) obj;
         boolean removed = set.remove(tick);
@@ -80,14 +80,14 @@ public abstract class ServerWorldMixin {
         return removed;
     }
 
-    @Redirect(method = "method_3644(Z)Z", at = @At(value = "INVOKE", target = "Ljava/util/List;add(Ljava/lang/Object;)Z"))
+    @Redirect(method = "doScheduledTicks(Z)Z", at = @At(value = "INVOKE", target = "Ljava/util/List;add(Ljava/lang/Object;)Z"))
     private boolean optimizedchunkloader$indexAddRunning(List<ScheduledTick> list, Object obj) {
         ScheduledTick tick = (ScheduledTick) obj;
         bucketAdd(this.fastRunningTicks, keyFor(tick.pos), tick);
         return list.add((ScheduledTick) obj);
     }
 
-    @Inject(method = "method_3644(Z)Z", at = @At("TAIL"))
+    @Inject(method = "doScheduledTicks(Z)Z", at = @At("TAIL"))
     private void optimizedchunkloader$clearRunningIndex(boolean bl, CallbackInfoReturnable<Boolean> cir) {
         this.fastRunningTicks.clear();
     }
