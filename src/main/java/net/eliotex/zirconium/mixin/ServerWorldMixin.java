@@ -1,7 +1,8 @@
 package net.eliotex.zirconium.mixin;
+
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.ScheduledTick;
-import net.minecraft.util.math.BlockBox;
+import net.minecraft.server.world.ScheduledTick;
+import net.minecraft.world.gen.structure.StructureBox;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Final;
@@ -21,9 +22,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Collections;
 
-
 import java.util.List;
-
 
 @Mixin(ServerWorld.class)
 public abstract class ServerWorldMixin {
@@ -97,7 +96,7 @@ public abstract class ServerWorldMixin {
      * @reason chunk based blockupdate list, which has the same order like vanilla
      */
     @Overwrite
-    public List<ScheduledTick> getScheduledTicks(BlockBox box, boolean remove) {
+    public List<ScheduledTick> getScheduledTicks(StructureBox box, boolean remove) {
         List<ScheduledTick> pendingMatches = null;
         List<ScheduledTick> runningMatches = null;
 
