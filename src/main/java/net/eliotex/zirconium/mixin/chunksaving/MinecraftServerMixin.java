@@ -1,4 +1,4 @@
-package net.eliotex.zirconium.mixin;
+package net.eliotex.zirconium.mixin.chunksaving;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.*;

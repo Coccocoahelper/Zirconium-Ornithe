@@ -4,8 +4,9 @@
   "package": "net.eliotex.zirconium.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MinecraftServerMixin",
-    "ServerWorldMixin"
+    "chunksaving.MinecraftServerMixin",
+    "chunksaving.ServerWorldMixin",
+    "languagereloading.LanguageOptionsScreenMixin"
   ],
   "client": [
   ],
