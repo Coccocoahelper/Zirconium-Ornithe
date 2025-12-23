@@ -3,7 +3,7 @@ package net.eliotex.zirconium.mixin;
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.*;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.world.level.storage.WorldSaveException;
+import net.minecraft.world.storage.exception.SessionLockException;
 import org.spongepowered.asm.mixin.Mixin;
 import org.apache.logging.log4j.Logger;
 
@@ -31,12 +31,12 @@ public abstract class MinecraftServerMixin {
                     if (serverWorld != null) {
                         if (!silent) {
                             LOGGER.info("Saving chunks for level '"
-                                    + serverWorld.getLevelProperties().getLevelName()
+                                    + serverWorld.getData().getName()
                                     + "'/" + serverWorld.dimension.getName());
                         }
                         try {
                             serverWorld.save(true, null);
-                        } catch (WorldSaveException e) {
+                        } catch (SessionLockException e) {
                             LOGGER.warn(e.getMessage());
                         }
                     }
