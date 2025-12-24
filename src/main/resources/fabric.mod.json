@@ -3,15 +3,15 @@
   "id": "zirconium",
   "version": "0.1.0",
   "name": "Zirconium",
-  "description": "An optimized block updates handler, which drastically improves chunk saving",
+  "description": "A mod which ports optimizations from many other mods, esp. from Legacy Fabric and Forge.",
   "authors": [
     "Eliotex"
   ],
   "contact": {
-    "homepage": "https://legacyfabric.net/",
-    "sources": "https://github.com/Legacy-Fabric/fabric-example-mod"
+    "homepage": "https://github.com/Coccocoahelper/Zirconium-Ornithe",
+    "sources": "https://github.com/Coccocoahelper/Zirconium-Ornithe"
   },
-  "license": "LGPL-3.0-or-later",
+  "license": "LGPL-3.0-only",
   "environment": "*",
   "mixins": [
     "zirconium.mixins.json"

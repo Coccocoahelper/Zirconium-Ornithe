@@ -6,7 +6,15 @@
   "mixins": [
     "chunksaving.MinecraftServerMixin",
     "chunksaving.ServerWorldMixin",
-    "languagereloading.LanguageSelectionListWidgetMixin"
+    "languagereloading.LanguageSelectionListWidgetMixin",
+    "lithium.alloc.PistonBaseBlockMixin",
+    "lithium.alloc.PistonMoveStructureResolverMixin",
+    "lithium.alloc.RedstoneWireBlockMixin",
+    "lithium.entity.DataTrackerMixin",
+    "lithium.math.fastblockpos.DirectionMixin",
+    "lithium.math.fastutil.DirectionMixin",
+    "lithium.math.sine.MathHelperAccessor",
+    "lithium.math.sine.MathHelperMixin"
   ],
   "client": [
   ],
