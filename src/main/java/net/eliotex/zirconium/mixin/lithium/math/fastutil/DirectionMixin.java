@@ -1,7 +1,6 @@
 package net.eliotex.zirconium.mixin.lithium.math.fastutil;
 
 import java.util.Random;
-
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;

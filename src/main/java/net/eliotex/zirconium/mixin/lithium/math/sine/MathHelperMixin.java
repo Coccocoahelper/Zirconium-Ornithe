@@ -3,7 +3,7 @@ package net.eliotex.zirconium.mixin.lithium.math.sine;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 
-import net.eliotex.zirconium.mixin.lithium.math.sine.CompactSineLUT;
+import net.eliotex.zirconium.utils.lithium.math.CompactSineLUT;
 import net.minecraft.util.math.MathHelper;
 
 @Mixin(value = MathHelper.class, priority = 1500)

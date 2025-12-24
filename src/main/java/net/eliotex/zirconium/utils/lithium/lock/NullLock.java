@@ -1,11 +1,11 @@
-package net.eliotex.zirconium.mixin.lithium.lock;
+package net.eliotex.zirconium.utils.lithium.lock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
 /**
- * A Lock which doesn't do anything.
+ * A lock which doesn't do anything.
  */
 public class NullLock implements Lock {
 

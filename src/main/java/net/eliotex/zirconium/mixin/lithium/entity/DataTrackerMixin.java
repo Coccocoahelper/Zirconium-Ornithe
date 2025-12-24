@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.eliotex.zirconium.mixin.lithium.lock.NullReadWriteLock;
+import net.eliotex.zirconium.utils.lithium.lock.NullReadWriteLock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.data.DataTracker;
 

@@ -1,4 +1,4 @@
-package net.eliotex.zirconium.mixin.lithium.lock;
+package net.eliotex.zirconium.utils.lithium.lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
