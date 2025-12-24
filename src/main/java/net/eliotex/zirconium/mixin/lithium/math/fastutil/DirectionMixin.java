@@ -18,7 +18,7 @@ public class DirectionMixin {
 
     @Shadow
     @Final
-    private int idOpposite;
+    private int opposite;
 
     /**
      * @reason Avoid the modulo/abs operations
@@ -26,7 +26,7 @@ public class DirectionMixin {
      */
     @Overwrite
     public Direction getOpposite() {
-        return ALL[this.idOpposite];
+        return ALL[this.opposite];
     }
 
     /**
