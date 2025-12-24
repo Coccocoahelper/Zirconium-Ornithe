@@ -30,7 +30,7 @@ public abstract class LivingEntityMixin extends Entity {
 	 * @reason If the potion array is empty don't waste time checking it.
 	 */
 	@Overwrite()
-	public boolean isPotionActive(int effectID) {
+	public boolean hasStatusEffect(int effectID) {
 		return ingredientSlot.size() != 0 && ingredientSlot.containsKey(effectID);
 	}
 
@@ -39,7 +39,7 @@ public abstract class LivingEntityMixin extends Entity {
 	 * @reason If the potion array is empty don't waste time checking it.
 	 */
 	@Overwrite()
-	public boolean isPotionActive(StatusEffect effect) {
+	public boolean hasStatusEffect(StatusEffect effect) {
 		return ingredientSlot.size() != 0 && ingredientSlot.containsKey(effect.id);
 	}
 
