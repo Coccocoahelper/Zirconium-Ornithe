@@ -13,10 +13,12 @@ pluginManagement {
 			url = 'https://maven.ornithemc.net/snapshots'
 		}
 		maven {
-			url = "https://moehreag.duckdns.org/maven/snapshots"
+			name = 'AxolotlClient Releases'
+			url = 'https://maven.axolotlclient.com/releases'
 		}
 		maven {
-			url = "https://moehreag.duckdns.org/maven/releases"
+			name = 'AxolotlClient Snapshots'
+			url = 'https://maven.axolotlclient.com/snapshots'
 		}
 		gradlePluginPortal()
 	}

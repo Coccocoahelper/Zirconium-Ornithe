@@ -16,6 +16,12 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		url = "https://maven.axolotlclient.com/snapshots"
+	}
+	maven {
+		url = "https://maven.axolotlclient.com/releases"
+	}
 }
 
 dependencies {
@@ -24,16 +30,16 @@ dependencies {
 
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modImplementation("io.github.axolotlclient:AxolotlClient:${project.client}+1.8.9") {
+	modImplementation("io.github.axolotlclient:AxolotlClient:${project.axolotlclient}+1.8.9") {
 		transitive = false
 	}
-	implementation("io.github.axolotlclient.AxolotlClient:AxolotlClient-common:${project.client}") {
+	implementation("io.github.axolotlclient.AxolotlClient:AxolotlClient-common:${project.axolotlclient}") {
 		transitive = false
 	}
 	modApi("io.github.moehreag:search-in-resources:1.0.6+1.8.9")
-	modImplementation "io.github.axolotlclient:AxolotlClient-config:${project.config}+1.8.9"
-	include "io.github.axolotlclient:AxolotlClient-config:${project.config}+1.8.9"
-	implementation "io.github.axolotlclient.AxolotlClient-config:AxolotlClientConfig-common:${project.config}"
+	modImplementation("io.github.axolotlclient:AxolotlClient-config:${project.axolotlclient_config}+1.8.9")
+	include "io.github.axolotlclient:AxolotlClient-config:${project.axolotlclient_config}+1.8.9"
+	implementation "io.github.axolotlclient.AxolotlClient-config:AxolotlClientConfig-common:${project.axolotlclient_config}"
 
 	modImplementation "com.terraformersmc:modmenu:0.3.1+mc1.8.9"
 
