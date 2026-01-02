@@ -1,4 +1,4 @@
-package jp.s12kuma01.celeritasextra.mixin.render.fog;
+package net.eliotex.zirconium.mixin.fogcontrol;
 
 import net.minecraft.client.render.GameRenderer;
 import net.eliotex.zirconium.config.ZirconiumConfig;
@@ -29,4 +29,5 @@ public class GameRendererMixin {
             ci.cancel();
         }
     }
+
 }
