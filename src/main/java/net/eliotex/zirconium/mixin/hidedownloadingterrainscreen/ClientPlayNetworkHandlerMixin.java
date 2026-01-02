@@ -18,15 +18,15 @@ import org.spongepowered.asm.mixin.injection.Redirect;
  */
 // Adapted from embeddedt's ArchaicFix mod, for 1.7.10
 @Mixin(value = ClientPlayNetworkHandler.class, priority = 500)
-public abstract class ClientPlayNetworkHandler implements ClientPlayPacketHandler {
+public class ClientPlayNetworkHandler implements ClientPlayPacketHandler {
 
-    @Redirect(method = "handleJoinGame", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;displayGuiScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
-    private void onGuiDisplayJoin(Minecraft mc, Screen guiScreenIn) {
-        mc.displayGuiScreen(ZirconiumConfig.instance.hideDownloadingTerrainScreen.get() ? null : guiScreenIn);
+    @Redirect(method = "handleLogin", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;openScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
+    private void onGuiDisplayJoin(Minecraft minecraft, Screen screen) {
+        minecraft.openScreen(ZirconiumConfig.instance.hideDownloadingTerrainScreen.get() ? null : scree);
     }
 
-    @Redirect(method = "handleRespawn", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;displayGuiScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
-    private void onGuiDisplayRespawn(Minecraft mc, Screen guiScreenIn) {
-        mc.displayGuiScreen(ZirconiumConfig.instance.hideDownloadingTerrainScreen.get() ? null : guiScreenIn);
+    @Redirect(method = "handlePlayerRespawn", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;openScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
+    private void onGuiDisplayRespawn(Minecraft minecraft, Screen scren) {
+        minecraft.openScreen(ZirconiumConfig.instance.hideDownloadingTerrainScreen.get() ? null : screen);
     }
 }

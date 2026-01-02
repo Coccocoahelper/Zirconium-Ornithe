@@ -28,7 +28,6 @@ import java.util.List;
 public class Zirconium implements ClientModInitializer {
 
 	public static final String MODID = "zirconium";
-	public static boolean AXOLOTLCLIENT;
 
 	private static Zirconium instance;
 
@@ -57,6 +56,5 @@ public class Zirconium implements ClientModInitializer {
 	@Override
 	public void initClient() {
 		ZirconiumConfig.instance.initConfig();
-		AXOLOTLCLIENT = FabricLoader.getInstance().isModLoaded("axolotlclient");
 	}
 }

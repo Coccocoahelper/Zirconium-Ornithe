@@ -38,10 +38,12 @@ public class ZirconiumConfig {
     private final OptionCategory category = OptionCategory.create(Zirconium.MODID);
 
 	public final BooleanOption showFog = new BooleanOption("showFog", true);
+	public final BooleanOption hideDownloadingTerrainScreen = new BooleanOption("hideDownloadingTerrainScreen", true);
 
 	public void initConfig() {
 		category.add(
-			showFog
+			showFog,
+			hideDownloadingTerrainScreen
 		);
 
 		ConfigManager configManager = new VersionedJsonConfigManager(FabricLoader.getInstance().getConfigDir().resolve(Zirconium.MODID + ".json"),
