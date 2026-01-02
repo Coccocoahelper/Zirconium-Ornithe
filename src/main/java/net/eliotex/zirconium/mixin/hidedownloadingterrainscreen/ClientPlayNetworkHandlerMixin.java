@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
  */
 // Adapted from embeddedt's ArchaicFix mod, for 1.7.10
 @Mixin(value = ClientPlayNetworkHandler.class, priority = 500)
-public class ClientPlayNetworkHandlerMixin implements ClientPlayPacketHandler {
+public abstract class ClientPlayNetworkHandlerMixin implements ClientPlayPacketHandler {
 
     @Redirect(method = "handleLogin", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;openScreen(Lnet/minecraft/client/gui/screen/Screen;)V"))
     private void onGuiDisplayJoin(Minecraft minecraft, Screen screen) {
