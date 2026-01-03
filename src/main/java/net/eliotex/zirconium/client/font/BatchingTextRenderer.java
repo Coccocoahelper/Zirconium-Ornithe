@@ -381,23 +381,23 @@ public class BatchingTextRenderer {
     }
 
     public float getGlyphScaleX() {
-        return forceDefaults() ? 1 : (float) (FontConfig.glyphScale * Math.pow(2, FontConfig.glyphAspect));
+        return 1f;
     }
 
     public float getGlyphScaleY() {
-        return forceDefaults() ? 1 : (float) (FontConfig.glyphScale / Math.pow(2, FontConfig.glyphAspect));
+        return 1f;
     }
 
     public float getGlyphSpacing() {
-        return forceDefaults() ? 0 : FontConfig.glyphSpacing;
+        return 0f;
     }
 
     public float getWhitespaceScale() {
-        return forceDefaults() ? 1 : FontConfig.whitespaceScale;
+        return 1f;
     }
 
     public float getShadowOffset() {
-        return forceDefaults() ? 1 : FontConfig.fontShadowOffset;
+        return 1f;
     }
 
     private static final char FORMATTING_CHAR = 167; // §
@@ -519,7 +519,7 @@ public class BatchingTextRenderer {
                     chr = FontProviderMC.get(this.isSGA).getRandomReplacement(chr);
                 }
 
-                FontProvider fontProvider = FontStrategist.getFontProvider(this, chr, FontConfig.enableCustomFont, unicodeFlag);
+                FontProvider fontProvider = FontStrategist.getFontProvider(this, chr, unicodeFlag);
 
                 heightNorth = anchorY + (underlying.FONT_HEIGHT - 1.0f) * (0.5f - glyphScaleY * fontProvider.getYScaleMultiplier() / 2);
                 float heightSouth = (underlying.FONT_HEIGHT - 1.0f) * glyphScaleY * fontProvider.getYScaleMultiplier();
@@ -538,7 +538,7 @@ public class BatchingTextRenderer {
                 final float vSz = fontProvider.getVSize(chr);
                 final float itOff = curItalic ? 1.0F : 0.0F; // italic offset
                 final float shadowOffset = fontProvider.getShadowOffset();
-                final float xShift = (fontProvider instanceof FontProviderCustom ? getGlyphScaleX() * FontConfig.customFontScale : 0.0f); // corrective factor to improve text alignment
+                final float xShift = 0.0f; // corrective factor to improve text alignment
                 final int shadowCopies = FontConfig.shadowCopies;
                 final int boldCopies = FontConfig.boldCopies;
                 final Identifier texture = fontProvider.getTexture(chr);

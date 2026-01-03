@@ -1,6 +1,6 @@
 package net.eliotex.zirconium.client.font;
 
-import com.gtnewhorizons.angelica.config.FontConfig;
+//import com.gtnewhorizons.angelica.config.FontConfig;
 import net.minecraft.resource.Identifier;
 
 public final class FontProviderUnicode implements FontProvider {
@@ -82,7 +82,7 @@ public final class FontProviderUnicode implements FontProvider {
 
     @Override
     public float getShadowOffset() {
-        return FontConfig.fontShadowOffset;
+        return 1f;
     }
 
     @Override

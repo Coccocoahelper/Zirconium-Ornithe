@@ -2,7 +2,7 @@ package net.eliotex.zirconium.client.font;
 
 //import com.gtnewhorizons.angelica.config.FontConfig;
 import it.unimi.dsi.fastutil.chars.Char2ShortOpenHashMap;
-import jss.util.RandomXoshiro256StarStar;
+import net.eliotex.zirconium.utils.random.RandomXoshiro256StarStar;
 import net.minecraft.resource.Identifier;
 
 public final class FontProviderMC implements FontProvider {

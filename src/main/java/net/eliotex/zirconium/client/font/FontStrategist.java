@@ -1,9 +1,9 @@
 package net.eliotex.zirconium.client.font;
 
 import com.google.common.collect.HashMultiset;
-import com.gtnewhorizons.angelica.config.FontConfig;
-//import net.eliotex.zirconium.mixin.fontrendering.ResourceAccessor;
-//import cpw.mods.fml.client.SplashProgress;
+/*import com.gtnewhorizons.angelica.config.FontConfig;
+import net.eliotex.zirconium.mixin.fontrendering.ResourceAccessor;
+import cpw.mods.fml.client.SplashProgress;*/
 import lombok.Getter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.render.TextRenderer;
