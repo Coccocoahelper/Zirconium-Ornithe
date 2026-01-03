@@ -1,10 +1,10 @@
 package net.eliotex.zirconium.client.font;
 
 import com.google.common.collect.ImmutableSet;
-import com.gtnewhorizon.gtnhlib.util.font.GlyphReplacements;
-import com.gtnewhorizons.angelica.config.FontConfig;
+import net.eliotex.zirconium.utils.font.GlyphReplacements;
+//import com.gtnewhorizons.angelica.config.FontConfig;
 import com.gtnewhorizons.angelica.glsm.GLStateManager;
-import com.gtnewhorizons.angelica.mixins.interfaces.TextRendererAccessor;
+import net.eliotex.zirconium.mixin.fontbathing.TextRendererAccessor;
 //import cpw.mods.fml.client.SplashProgress;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.coderbot.iris.gl.program.Program;
@@ -539,8 +539,8 @@ public class BatchingTextRenderer {
                 final float itOff = curItalic ? 1.0F : 0.0F; // italic offset
                 final float shadowOffset = fontProvider.getShadowOffset();
                 final float xShift = 0.0f; // corrective factor to improve text alignment
-                final int shadowCopies = FontConfig.shadowCopies;
-                final int boldCopies = FontConfig.boldCopies;
+                final int shadowCopies = 1; //used to be FontConfig
+                final int boldCopies = 1; //used to be FontConfig
                 final Identifier texture = fontProvider.getTexture(chr);
                 final int idxId = idxWriterIndex;
 
