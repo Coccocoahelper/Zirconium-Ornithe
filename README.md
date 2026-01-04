@@ -7,6 +7,8 @@ This is an Ornithe port of Eliotex's Zirconium mod, with the following optimizat
 
 - Compact sine lookup table (from Jellysquid's Lithium mod)
 
+- Font batching (from GTNH's Angelica mod, and awruff's port to 1.8.9)
+
 - Effect checking by skipping if none are active (from jss2a98aj's BugTorch mod)
 
 Additionally, it has:

@@ -44,6 +44,9 @@ dependencies {
 
 	modImplementation "com.terraformersmc:modmenu:0.3.1+mc1.8.9"
 
+	implementation "it.unimi.dsi:fastutil:8.5.13"
+    include "it.unimi.dsi:fastutil:8.5.13"
+
 	ploceus.dependOsl(project.osl_version)
 }
 
