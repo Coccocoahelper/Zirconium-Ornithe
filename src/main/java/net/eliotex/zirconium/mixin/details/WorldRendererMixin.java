@@ -1,6 +1,7 @@
 package net.eliotex.zirconium.mixin.details;
 
 import net.eliotex.zirconium.config.ZirconiumConfig;
+import com.mojang.blaze3d.vertex.BufferBuilder;
 import net.minecraft.world.World;
 import net.minecraft.client.render.world.WorldRenderer;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
