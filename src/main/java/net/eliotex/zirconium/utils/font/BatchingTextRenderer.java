@@ -1,6 +1,5 @@
 package net.eliotex.zirconium.utils.font;
 
-import net.eliotex.zirconium.mixin.fontbatching.TextRendererAccessor;
 import it.unimi.dsi.fastutil.chars.Char2ShortOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.eliotex.zirconium.utils.random.RandomXoshiro256StarStar;

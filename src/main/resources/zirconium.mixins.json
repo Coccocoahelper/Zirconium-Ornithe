@@ -6,6 +6,8 @@
   "mixins": [
     "chunksaving.MinecraftServerMixin",
     "chunksaving.ServerWorldMixin",
+    "fontbatching.TextRendererMixin",
+    "fontbatching.GameGuiMixin",
     "details.GameRendererMixin",
     "details.WorldRendererMixin",
     "languagereloading.LanguageSelectionListWidgetMixin",
@@ -19,8 +21,6 @@
     "lithium.math.sine.MathHelperMixin",
     "fontbatching.TextRendererMixin",
     "misc.LivingEntityMixin"
-  ],
-  "client": [
   ],
   "injectors": {
     "defaultRequire": 1
