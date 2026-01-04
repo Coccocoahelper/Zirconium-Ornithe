@@ -23,9 +23,10 @@ public class GameRendererMixin {
         cancellable = true
     )
     private void renderFog(int mode, float tickDelte, CallbackInfo ci) {
-        if (!ZirconiumConfig.instance.fig.get()) {
+        if (!ZirconiumConfig.instance.fog.get()) {
             ci.cancel();
         }
     }
 
 }
+
