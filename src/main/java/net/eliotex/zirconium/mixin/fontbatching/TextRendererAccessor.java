@@ -1,6 +1,6 @@
 package net.eliotex.zirconium.mixin.fontbatching;
 
-import net.eliotex.zirconium.client.font.BatchingTextRenderer;
+import net.eliotex.zirconium.utils.font.BatchingTextRenderer;
 import net.minecraft.resource.Identifier;
 
 public interface TextRendererAccessor {
