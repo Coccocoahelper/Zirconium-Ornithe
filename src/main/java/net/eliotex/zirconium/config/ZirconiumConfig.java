@@ -63,7 +63,7 @@ public class ZirconiumConfig {
 			sun,
 			moon,
 			fog
-		)
+		);
 
 		ConfigManager configManager = new VersionedJsonConfigManager(FabricLoader.getInstance().getConfigDir().resolve(Zirconium.MODID + ".json"),
 			category, 1, (configVersion, configVersion1, optionCategory, jsonObject) -> jsonObject);
