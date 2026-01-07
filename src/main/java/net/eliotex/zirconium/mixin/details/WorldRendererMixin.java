@@ -63,7 +63,7 @@ public class WorldRendererMixin {
         at = @At("HEAD"),
         cancellable = true
     )
-    public void renderStars(BufferBuilder bufferBuilder, CallbackInfo ci) {
+    public void renderStars(CallbackInfo ci) {
         if (!ZirconiumConfig.instance.stars.get()) {
             ci.cancel();
         }
