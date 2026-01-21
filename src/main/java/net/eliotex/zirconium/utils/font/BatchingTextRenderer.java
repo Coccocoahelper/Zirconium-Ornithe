@@ -225,6 +225,7 @@ public class BatchingTextRenderer {
         if (batchDepth == Integer.MAX_VALUE) {
             throw new StackOverflowError("More than Integer.MAX_VALUE nested font rendering batch operations");
         }
+
         batchDepth++;
     }
 
@@ -233,8 +234,10 @@ public class BatchingTextRenderer {
             batchDepth = 0;
             return;
         }
-        batchDepth--;
-        if (batchDepth == 0) {
+
+        //batchDepth--;
+
+        if (--batchDepth == 0) {
             // We finished any nested batches
             flushBatch();
         }
@@ -582,6 +585,7 @@ public class BatchingTextRenderer {
                 pushUntexRect(underlineStartX, underlineY, underlineEndX - underlineStartX, 1.0f, curColor);
                 pushDrawCmd(ulIdx, 6, null, false);
             }
+
             if (curStrikethrough && strikethroughStartX != strikethroughEndX) {
                 final int ulIdx = idxWriterIndex;
                 pushUntexRect(

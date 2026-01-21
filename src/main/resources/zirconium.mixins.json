@@ -18,7 +18,8 @@
     "lithium.math.fastutil.DirectionMixin",
     "lithium.math.sine.MathHelperAccessor",
     "lithium.math.sine.MathHelperMixin",
-    "misc.LivingEntityMixin"
+    "misc.LivingEntityMixin",
+    "misc.FormattingMixin"
   ],
   "commented_out_mixins": [
     "fontbatching.TextRendererMixin",
