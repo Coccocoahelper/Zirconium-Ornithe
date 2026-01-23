@@ -22,7 +22,7 @@ public abstract class ItemRendererMixin {
 	@Overwrite
     private void renderEnchantmentGlint(int unused, int posX, int posY, int width, int height) {
         final float timeUVSpeed = 0.00390625F;
-        final Tesselator tessellator = Tesselator.instance;
+        final Tesselator tessellator = Tesselator.getInstance();
         final long time = Minecraft.getTime();
 
         float layerUVNoise = 4.0F;

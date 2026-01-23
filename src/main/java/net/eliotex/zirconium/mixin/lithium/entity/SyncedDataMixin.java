@@ -12,10 +12,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.eliotex.zirconium.utils.lithium.lock.NullReadWriteLock;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.data.SynchedData;
+import net.minecraft.entity.data.SyncedData;
 
 /**
- * The vanilla implementation of {@link SynchedData} performs locking when fetching or updating data due to a legacy
+ * The vanilla implementation of {@link SyncedData} performs locking when fetching or updating data due to a legacy
  * quirk in older versions of the game where updates would occur on a network thread for (de)serialization while entities
  * were ticking and accessing values from it on the main thread. In newer versions (1.14+) this no longer happens.
  * <p>
@@ -23,8 +23,8 @@ import net.minecraft.entity.data.SynchedData;
  * baking entities) during entity initialization and main-thread network updates, and as such the locking mechanism
  * is unnecessary since the job is to only protect against simultaneous reading and writing.
  */
-@Mixin(SynchedData.class)
-public class SynchedDataMixin {
+@Mixin(SyncedData.class)
+public class SyncedDataMixin {
     
     @Mutable
     @Shadow
