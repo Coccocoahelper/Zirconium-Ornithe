@@ -12,7 +12,7 @@
     "lithium.alloc.PistonBaseBlockMixin",
     "lithium.alloc.PistonMoveStructureResolverMixin",
     "lithium.alloc.RedstoneWireBlockMixin",
-    "lithium.entity.DataTrackerMixin",
+    "lithium.entity.SynchedDataMixin",
     "lithium.math.fastblockpos.DirectionMixin",
     "lithium.math.fastutil.DirectionMixin",
     "lithium.math.sine.MathHelperAccessor",
