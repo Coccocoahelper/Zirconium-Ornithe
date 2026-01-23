@@ -6,8 +6,7 @@
   "mixins": [
     "chunksaving.MinecraftServerMixin",
     "chunksaving.ServerWorldMixin",
-    "fontbatching.TextRendererMixin",
-    "fontbatching.GameGuiMixin",
+    "fastglint.ItemRendererMixin",
     "hidedownloadingterrainscreen.ClientPlayNetworkHandlerMixin",
     "languagereloading.LanguageSelectionListWidgetMixin",
     "lithium.alloc.PistonBaseBlockMixin",

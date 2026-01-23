@@ -258,11 +258,13 @@ public class BatchingTextRenderer {
         GlStateManager.blendFuncSeparate(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA, GL11.GL_ONE, GL11.GL_ZERO);
         GlStateManager.shadeModel(GL11.GL_FLAT);
 
-        GL11.glTexCoordPointer(2, GL11.GL_FLOAT, 0, batchVtxTexCoords);
+        //GL11.glTexCoordPointer(2, GL11.GL_FLOAT, 0, batchVtxTexCoords);
+        GL11.glTexCoordPointer(2, 0, batchVtxTexCoords);
         GL11.glEnableClientState(GL11.GL_TEXTURE_COORD_ARRAY);
         GL11.glColorPointer(4, GL11.GL_UNSIGNED_BYTE, 0, batchVtxColors);
         GL11.glEnableClientState(GL11.GL_COLOR_ARRAY);
-        GL11.glVertexPointer(2, GL11.GL_FLOAT, 0, batchVtxPositions);
+        //GL11.glVertexPointer(2, GL11.GL_FLOAT, 0, batchVtxPositions);
+        GL11.glVertexPointer(2, 0, batchVtxPositions);
         GL11.glEnableClientState(GL11.GL_VERTEX_ARRAY);
         GlStateManager.color4f(1.0f, 1.0f, 1.0f, 1.0f);
 
