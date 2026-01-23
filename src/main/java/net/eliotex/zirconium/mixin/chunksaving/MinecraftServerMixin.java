@@ -19,7 +19,8 @@ public abstract class MinecraftServerMixin {
      * @author Elio
      * @reason Queue to save the worlds more effectively
      * */
-    @Overwrite public void saveWorlds(boolean silent) {
+    @Overwrite
+    public void saveWorlds(boolean silent) {
         if (this.savingWorlds) {
             this.queuedSave = true;
             return;

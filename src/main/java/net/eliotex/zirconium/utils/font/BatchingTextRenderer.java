@@ -8,7 +8,7 @@ import net.minecraft.client.render.TextRenderer;
 import net.minecraft.client.render.Window;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.resource.Identifier;
-import com.mojang.blaze3d.platform.GlStateManager;
+import net.minecraft.client.render.platform.GlStateManager;
 import org.lwjgl.opengl.GL11;
 
 import java.nio.ByteBuffer;
