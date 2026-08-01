@@ -6,7 +6,7 @@
   "mixins": [
     "chunksaving.MinecraftServerMixin",
     "chunksaving.ServerWorldMixin",
-    "fastglint.ItemRendererMixin",
+    "fasterglint.ItemRendererMixin",
     "hidedownloadingterrainscreen.ClientPlayNetworkHandlerMixin",
     "languagereloading.LanguageSelectionListWidgetMixin",
     "lithium.alloc.PistonBaseBlockMixin",
@@ -17,6 +17,8 @@
     "lithium.math.fastutil.DirectionMixin",
     "lithium.math.sine.MathHelperAccessor",
     "lithium.math.sine.MathHelperMixin",
+    "stbitextureloading.TextureAtlasMixin",
+    "stbitextureloading.TextureAtlasSpriteMixin",
     "misc.LivingEntityMixin",
     "misc.FormattingMixin"
   ],

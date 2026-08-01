@@ -1,13 +1,18 @@
 plugins {
 	id 'maven-publish'
 	id 'io.freefair.lombok' version "8.12"
-	id 'net.fabricmc.fabric-loom-remap' version '1.14-SNAPSHOT'
-	id 'ploceus' version '1.14-SNAPSHOT'
+	id 'net.fabricmc.fabric-loom-remap' version '1.17-SNAPSHOT'
+	id 'ploceus' version '1.17-SNAPSHOT'
 }
 
 base {
 	archivesName = project.archives_base_name
 }
+
+ploceus {
+	setIntermediaryGeneration(2)
+}
+
 version = "${project.version}+mc${project.minecraft_version}"
 group = project.maven_group
 
@@ -33,7 +38,7 @@ dependencies {
 
 	implementation("it.unimi.dsi:fastutil:8.5.13")
 
-	implementation("org.lwjgl:lwjgl:3.3.6")
+	implementation("org.lwjgl:lwjgl:3.4.1")
     //include "it.unimi.dsi:fastutil:8.5.13"
 
 	ploceus.dependOsl(project.osl_version)
