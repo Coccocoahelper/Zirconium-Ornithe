@@ -1,4 +1,4 @@
-package net.eliotex.zirconium.mixin.fontbatching;
+/*package net.eliotex.zirconium.mixin.fontbatching;
 
 import net.eliotex.zirconium.utils.font.BatchingTextRenderer;
 import net.eliotex.zirconium.utils.font.TextRendererAccessor;
@@ -136,4 +136,4 @@ public abstract class TextRendererMixin implements TextRendererAccessor {
         textureManager.bind(location);
     }
 
-}
+}*/

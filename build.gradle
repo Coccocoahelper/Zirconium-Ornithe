@@ -1,6 +1,6 @@
 plugins {
 	id 'maven-publish'
-	id 'io.freefair.lombok' version "8.12"
+	id 'io.freefair.lombok' version '8.12'
 	id 'net.fabricmc.fabric-loom-remap' version '1.17-SNAPSHOT'
 	id 'ploceus' version '1.17-SNAPSHOT'
 }
@@ -9,12 +9,13 @@ base {
 	archivesName = project.archives_base_name
 }
 
+version = "${project.version}+mc${project.minecraft_version}"
+group = project.maven_group
+
+
 ploceus {
 	setIntermediaryGeneration(2)
 }
-
-version = "${project.version}+mc${project.minecraft_version}"
-group = project.maven_group
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.
@@ -31,11 +32,11 @@ repositories {
 }
 
 dependencies {
-	minecraft("com.mojang:minecraft:${project.minecraft_version}")
-	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	implementation("it.unimi.dsi:fastutil:8.5.13")
-	implementation("org.lwjgl:lwjgl:3.4.1")
+	implementation "it.unimi.dsi:fastutil:8.5.13"
+	implementation "org.lwjgl:lwjgl:3.4.1"
     //include "it.unimi.dsi:fastutil:8.5.13"
 
 	exceptions ploceus.raven(project.raven_build)

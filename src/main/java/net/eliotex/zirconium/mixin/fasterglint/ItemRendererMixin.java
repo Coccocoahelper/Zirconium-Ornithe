@@ -1,4 +1,4 @@
-package net.eliotex.zirconium.mixim.fasterglint;
+/*package net.eliotex.zirconium.mixim.fasterglint;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -56,4 +56,4 @@ public abstract class ItemRendererMixin {
 
         GLX.blendFuncSeparate(770, 771, 1, 0);
     }
-}
+}*/

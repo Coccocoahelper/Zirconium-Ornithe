@@ -1,4 +1,4 @@
-package net.eliotex.zirconium.mixin.fontbatching;
+/*package net.eliotex.zirconium.mixin.fontbatching;
 
 import net.eliotex.zirconium.utils.font.TextRendererAccessor;
 import net.minecraft.client.gui.GameGui;
@@ -29,4 +29,4 @@ public abstract class GameGuiMixin {
     private void end(float tickDelta, CallbackInfo ci) {
         ((TextRendererAccessor)getTextRenderer()).angelica$getBatcher().endBatch();
     }
-}
+}*/

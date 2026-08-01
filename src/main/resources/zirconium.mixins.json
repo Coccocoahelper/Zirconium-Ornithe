@@ -6,7 +6,6 @@
   "mixins": [
     "chunksaving.MinecraftServerMixin",
     "chunksaving.ServerWorldMixin",
-    "fasterglint.ItemRendererMixin",
     "hidedownloadingterrainscreen.ClientPlayNetworkHandlerMixin",
     "languagereloading.LanguageSelectionListWidgetMixin",
     "lithium.alloc.PistonBaseBlockMixin",
@@ -23,6 +22,7 @@
     "misc.FormattingMixin"
   ],
   "commented_out_mixins": [
+    "fasterglint.ItemRendererMixin",
     "fontbatching.TextRendererMixin",
     "fontbatching.GameGuiMixin"
   ],
