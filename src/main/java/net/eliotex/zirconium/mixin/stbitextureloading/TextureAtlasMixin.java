@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import net.eliotex.zirconium.utils.misc.NativeBackedImage;
 
 @Mixin(TextureAtlas.class)
-public abstract class MixinTextureAtlas {
+public abstract class TextureAtlasMixin {
 
     @Redirect(
         method = "loadAndStitch",
