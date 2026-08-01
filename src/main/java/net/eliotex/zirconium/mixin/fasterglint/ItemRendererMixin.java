@@ -19,7 +19,7 @@ public abstract class ItemRendererMixin {
 	 * @author jss2a98aj
 	 * @reason Makes renderGlint faster and fixes glBlendFunc being left with the wrong values.
 	 */
-	@Overwrite
+	/*@Overwrite
     private void renderEnchantmentGlint(int unused, int posX, int posY, int width, int height) {
         final float timeUVSpeed = 0.00390625F;
         final Tesselator tessellator = Tesselator.getInstance();
