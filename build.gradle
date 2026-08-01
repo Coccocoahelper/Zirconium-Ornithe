@@ -39,9 +39,9 @@ dependencies {
 	implementation "org.lwjgl:lwjgl:3.4.1"
     //include "it.unimi.dsi:fastutil:8.5.13"
 
-	exceptions ploceus.raven(project.raven_build)
-	signatures ploceus.sparrow(project.sparrow_build)
-	nests ploceus.nests(project.nests_build)
+	//exceptions ploceus.raven(project.raven_build)
+	//signatures ploceus.sparrow(project.sparrow_build)
+	//nests ploceus.nests(project.nests_build)
 	mappings ploceus.featherMappings(project.feather_build)
 
 	ploceus.dependOsl(project.osl_version)
