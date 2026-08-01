@@ -19,7 +19,7 @@ public abstract class TextureAtlasMixin {
         method = "loadAndStitch",
         at = @At(
             value = "INVOKE",
-            target = "Ljavax/imageio/ImageIO;read(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;",
+            target = "Lnet/minecraft/client/render/texture/TextureUtil;readImage(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;",
             remap = false))
     private BufferedImage redirectImageRead(InputStream stream) {
         try {
